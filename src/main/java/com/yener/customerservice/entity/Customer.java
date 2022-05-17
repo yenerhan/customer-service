@@ -1,8 +1,6 @@
 package com.yener.customerservice.entity;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -10,6 +8,7 @@ import javax.persistence.*;
 @Table(name = "customer")
 @Getter
 @Setter
+@AllArgsConstructor
 @ToString
 public class Customer {
 
