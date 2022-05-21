@@ -6,6 +6,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+
 @Controller
 @RequestMapping("/v1/customer")
 public class CustomerController {
@@ -17,7 +19,7 @@ public class CustomerController {
     }
 
     @PostMapping("/createCustomer")
-    public ResponseEntity<CreateCustomerResponseDTO> createCustomer(@RequestBody CreateCustomerRequestDTO createCustomerRequestDTO) {
+    public ResponseEntity<CreateCustomerResponseDTO> createCustomer(@Valid @RequestBody CreateCustomerRequestDTO createCustomerRequestDTO) {
         return ResponseEntity.ok(customerService.createCustomer(createCustomerRequestDTO));
     }
 
