@@ -23,22 +23,15 @@ import static org.hamcrest.Matchers.is;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-@ActiveProfiles("test")
+
 @AutoConfigureMockMvc
-@SpringBootTest
 @RunWith(SpringRunner.class)
+@SpringBootTest
+@ActiveProfiles("test")
 public class CustomerControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
-
-    @Autowired
-    private CustomerRepository customerRepository;
-
-    @Autowired
-    private ModelMapper modelMapper;
-
-    private CustomerService customerService = new CustomerService(customerRepository, modelMapper);
 
     private ObjectMapper mapper = new ObjectMapper();
 
