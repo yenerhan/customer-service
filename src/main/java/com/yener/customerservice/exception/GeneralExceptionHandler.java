@@ -15,7 +15,7 @@ import java.util.Map;
 
 @RestControllerAdvice
 public class GeneralExceptionHandler extends ResponseEntityExceptionHandler {
-    
+
     /**
      * Requestteki valide edilmiş fieldleri bulup kullanıcaya döner
      */

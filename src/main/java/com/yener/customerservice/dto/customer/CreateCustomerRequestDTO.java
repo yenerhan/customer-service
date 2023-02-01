@@ -5,10 +5,14 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
 public class CreateCustomerRequestDTO {
-    private CustomerDTO customerDTO;
+    @NotNull
+    private @Valid CustomerDTO customerDTO;
 }
